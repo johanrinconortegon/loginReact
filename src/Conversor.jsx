@@ -6,7 +6,7 @@ import './App.css'
 function Conversor() {
   const [textoAvoz, setTextoAVoz] = useState('')
   const [vozATexto, setvozATexto] = useState('')
-  
+
   function cambiarTexto(evento) {
     setTextoAVoz(evento.target.value)
   }
@@ -26,19 +26,19 @@ function Conversor() {
     recognition.onresult = resultado
   }
 
-    return (
-      <>
-        <h1>Conversor TTS Y STT</h1>
-        <br />
-        <h3>Conversor de texto a voz</h3>
-        <input type="text" id="textoAVoz" value={textoAvoz} onChange={cambiarTexto} />
-        <button onClick={convertirTextoAVoz}>Convertir</button>
+  return (
+    <>
+      <h1>Conversor TTS Y STT</h1>
+      <br />
+      <h3>Conversor de texto a voz</h3>
+      <input type="text" id="textoAVoz" value={textoAvoz} onChange={cambiarTexto} />
+      <button onClick={convertirTextoAVoz}>Convertir</button>
 
-        <h3>Conversor de voz a texto</h3>
-        <button onClick={grabarVozATexto}>Grabar</button>
-        {vozATexto}
-      </>
-    );
-  
+      <h3>Conversor de voz a texto</h3>
+      <button onClick={grabarVozATexto}>Grabar</button>
+      {vozATexto}
+    </>
+  );
+
 }
 export default Conversor
