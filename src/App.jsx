@@ -19,8 +19,8 @@ function App() {
   }
 
   function recargarAhora() {
-    setRecargar(!recargar) 
-    
+    setRecargar(!recargar)
+
   }
 
   async function ingresar() {
@@ -52,7 +52,7 @@ function App() {
         <Registro recargarAhora={recargarAhora} />
         <Conversor />
         <Usuarios recargar={recargar} />
-        
+
 
       </>)
   }
